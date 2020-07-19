@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="p1.Address" table="ADDRESS">
+		<id name="addid" type="string" column="ADD_ID">
+			<generator class="increment"></generator> <!-- to increment EMP_ID automatically --> 
+		</id>
+		<property name="addline" type="string" column="ADD_LINE" >
+			<column name="ADD_LINE" />
+		</property>
+		<property name="cty" type="string" column="CITY" >
+			<column name="CITY" />
+		</property>
+		<property name="state" type="string" column="STATE" >
+			<column name="STATE" />
+		</property>
+		<property name="country" type="string" column="COUNTRY" >
+			<column name="COUNTRY" />
+		</property>
+	</class>
+</hibernate-mapping>
