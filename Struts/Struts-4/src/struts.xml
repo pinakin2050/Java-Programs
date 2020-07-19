@@ -3,10 +3,14 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">     		
 <struts>
     <package name="abc" extends="struts-default">
+    <interceptors>
+    	<interceptor name="I3" class="p1.Exmp3"></interceptor>
+    </interceptors>
 	 <action name="reg"  class="p1.RegisterAction">
-     <result name="s">success.jsp</result>
-     <result name="f">failure.jsp</result>
-     <result name="input">/register.jsp</result>
+	 <interceptor-ref name="I3"></interceptor-ref>
+     <result name="s">Success.html</result>
+     <result name="f">Failure.html</result>
+     <result name="input">/Register.jsp</result>
     </action>
 	 </package>
 </struts>

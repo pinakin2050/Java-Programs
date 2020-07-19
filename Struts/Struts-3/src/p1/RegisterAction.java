@@ -11,10 +11,10 @@ public class RegisterAction extends ActionSupport{
 		public void setUsername(String username) {
 			this.username = username;
 		}
-		public String getUserPassword() {
+		public String getUsercity() {
 			return usercity;
 		}
-		public void setUserPassword(String usercity) {
+		public void setUsercity(String usercity) {
 			this.usercity = usercity;
 		}
 		

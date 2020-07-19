@@ -20,11 +20,10 @@ public class Exmp3 implements Interceptor {
 	public String intercept(ActionInvocation ai) throws Exception {
 		Object o=ai.getAction();
 		String username = ((RegisterAction) o).getUsername();
-		String userpassword = ((RegisterAction) o).getUserPassword();
-		System.out.print(userpassword);
+		String userPassword = ((RegisterAction) o).getUserPassword();
 		ActionContext ac = ai.getInvocationContext(); //To user HttpServletREsponse first invoke it 
 		HttpServletResponse response=(HttpServletResponse)ac.get("HTTP RESPONSE"); // invoking http response
-		if(username.isEmpty()||userpassword.isEmpty())
+		if(username.isEmpty()||userPassword.isEmpty())
 			response.sendRedirect("/Struts4/errorRegister.jsp");
 		String temp=ai.invoke();
 		return temp;
